@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_yo_its_wrong.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 15:49:28 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/07 15:03:56 by slavoie          ###   ########.fr       */
+/*   Created: 2022/05/03 15:46:31 by slavoie           #+#    #+#             */
+/*   Updated: 2022/05/03 15:59:47 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+void	yo_its_wrong(char *str)
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
+	ft_putstr_fd(RED, 2);
+	ft_putstr_fd(str, 2);
+	exit(0);
 }

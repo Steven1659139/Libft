@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <marvin@42quebec.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 15:49:28 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/07 15:03:56 by slavoie          ###   ########.fr       */
+/*   Created: 2022/05/03 16:11:44 by slavoie           #+#    #+#             */
+/*   Updated: 2022/05/03 16:12:14 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f) (void *))
+int	ft_abs(int n)
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
+	if (n < 0)
+		return (n * -1);
+	return (n);
 }

@@ -11,6 +11,25 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct s_dlist
+{
+	void			*content;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
+}					t_dlist;
+
+// Couleur
+
+# define RED "\e[0;31m"
+# define GREEN "\e[0;32m"
+# define YELLOW "\e[0;33m"
+# define BLUE "\e[0;34m"
+# define VIOLET "\e[0;35m"
+# define CYAN "\e[0;36m"
+
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
+
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -18,6 +37,12 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_calloc(size_t count, size_t size);
+void	*get_top(t_dlist *stack);
+void	table_flip(char **tab);
+void	ft_print_hex(unsigned int num);
+void	lst_addback_dbl(t_dlist **alst, t_dlist *new);
+char	*ft_num_to_base(unsigned long long num, int base);
+void	yo_its_wrong(char *str);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
@@ -41,6 +66,7 @@ int		ft_lstsize(t_list *lst);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
+size_t	ft_lstsize_dbl(t_dlist **first);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
@@ -54,5 +80,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *));
+t_dlist	*lstlast_dbl(t_dlist **first, t_dlist *lst);
+void	lstadd(t_dlist **first, t_dlist *new);
+long long	ft_atoll(const char *str);
+int	ft_abs(int n);
+
+
+int	twin_checker_dbl(t_dlist **lst);
+int	int_checker(long long nb);
 
 #endif
