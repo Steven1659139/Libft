@@ -6,11 +6,14 @@ SRC =  ft_strlen.c ft_isdigit.c ft_isalnum.c ft_isprint.c ft_tolower.c \
 	  ft_strrchr.c ft_strlcat.c ft_strlcpy.c ft_strnstr.c ft_calloc.c ft_strdup.c ft_substr.c \
 	  ft_strtrim.c ft_strjoin.c ft_putchar_fd.c ft_putstr_fd.c ft_split.c ft_itoa.c ft_strmapi.c \
 	  ft_putendl_fd.c ft_putnbr_fd.c ft_yo_its_wrong.c ft_abs.c ft_atoll.c ft_num_to_base.c ft_print_hex.c \
-	  ft_table_flip.c lstadd_dbl.c ft_lstsize_dbl.c get.c lst_addback_dbl.c lstnew_dbl.c check.c \
+	  ft_table_flip.c  get.c  check.c lst_addback_dbl.c lstnew_dbl.c lstadd_dbl.c ft_lstsize_dbl.c count.c \
+
+
+GNL = ./get_next_line/get_next_line_utils.c ./get_next_line/get_next_line.c
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRC:.c=.o) $(GNL:.c=.o)
 
 OBJS_BONUS = $(BONUS:.c=.o)
 
@@ -37,6 +40,8 @@ re: fclean all
 add:
 	git add *.c *.h Makefile
 	git status
+push:
+	git push origin master
 	
 test:
 	@echo "Le résultat vous convient-il ?"; \

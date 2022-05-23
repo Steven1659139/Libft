@@ -7,6 +7,11 @@ void	*get_top(t_dlist *stack)
 	return (stack->content);
 }
 
+void	*get_bottom(t_dlist *stack)
+{
+	return (stack->prev->content);
+}
+
 // int	get_max(t_stacks *container, char stack)
 // {
 // 	int	max;

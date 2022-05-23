@@ -4,6 +4,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdbool.h>
+# include "get_next_line/get_next_line.h"
 
 typedef struct s_list
 {
@@ -85,8 +86,9 @@ void	lstadd(t_dlist **first, t_dlist *new);
 long long	ft_atoll(const char *str);
 int	ft_abs(int n);
 
-
+int count_str(char **tab);
 int	twin_checker_dbl(t_dlist **lst);
+void	*get_bottom(t_dlist *stack);
 int	int_checker(long long nb);
 
 #endif
