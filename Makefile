@@ -19,7 +19,7 @@ OBJS_BONUS = $(BONUS:.c=.o)
 
 HDRS = libft.h
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 
 CC = gcc
 
