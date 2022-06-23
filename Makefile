@@ -38,7 +38,7 @@ fclean: clean
 re: fclean all
 
 add:
-	git add *.c *.h Makefile
+	git add *.c *.h Makefile get_next_line
 	git status
 push:
 	git push origin master

@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include <sys/stat.h>
 # include <stdlib.h>
+# include "../libft.h"
 
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);
