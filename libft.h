@@ -39,6 +39,7 @@ typedef struct s_dlist
 # define BLUE "\e[0;34m"
 # define VIOLET "\e[0;35m"
 # define CYAN "\e[0;36m"
+# define RESET "\033[0m"
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648

@@ -17,5 +17,6 @@ void	yo_its_wrong(char *str)
 	ft_putstr_fd(RED, 2);
 	ft_putstr_fd("Error\n", 2);
 	ft_putstr_fd(str, 2);
+	ft_putstr_fd(RESET, 2);
 	exit(0);
 }
