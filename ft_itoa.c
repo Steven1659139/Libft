@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 13:57:11 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/09 15:54:28 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/07/16 16:44:29 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static char	*ft_reverse_string(char *str, int index, int neg)
 
 	j = 0;
 	if (neg)
-		rtn = (char *)malloc((index + 2) * sizeof(char));
+		rtn = (char *)ft_calloc((index + 2), sizeof(char));
 	else
-		rtn = (char *)malloc((index + 1) * sizeof(char));
+		rtn = (char *)ft_calloc((index + 1), sizeof(char));
 	if (rtn == 0)
 		return (NULL);
 	if (neg)

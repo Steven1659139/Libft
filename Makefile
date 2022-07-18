@@ -26,26 +26,19 @@ CC = gcc
 all: $(NAME)
 
 $(NAME): $(OBJS) $(OBJS_BONUS)
-	ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
+	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	@rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	rm -f $(NAME) $(OBJS_BONUS)
+	@rm -f $(NAME) $(OBJS_BONUS)
 
 re: fclean all
 
 add:
-	git add *.c *.h Makefile get_next_line
-	git status
+	@git add *.c *.h Makefile get_next_line
+	@git status
 push:
-	git push origin master
-	
-test:
-	@echo "Le résultat vous convient-il ?"; \
-	read AGE;
-	YES = y
-	ifeq (AGE, YES)
-	echo "answer", $${AGE}
+	@git push origin master
