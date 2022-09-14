@@ -21,7 +21,7 @@ HDRS = libft.h
 
 CFLAGS = -Wall -Werror -Wextra -g
 
-CC = gcc
+CC = @gcc
 
 all: $(NAME)
 
