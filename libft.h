@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/07/04 15:04:31 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/09/15 14:52:07 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,7 @@ int			count_str(char **tab);
 int			twin_checker_dbl(t_dlist **lst);
 void		*get_bottom(t_dlist *stack);
 int			int_checker(long long nb);
+int			tab_length(char **tab);
+char		**tab_join(char **tab, char *line);
 
 #endif
