@@ -6,11 +6,20 @@
 /*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/15 15:03:12 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/09/23 11:16:10 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	print_tab(char **tab)
+{
+	while (*tab)
+	{
+		printf("str = %s\n", *tab);
+		tab++;
+	}
+}
 
 int	tab_length(char **tab)
 {

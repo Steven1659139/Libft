@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/15 14:52:07 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/09/23 11:16:59 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdbool.h>
+# include <stdio.h>
 # include "get_next_line/get_next_line.h"
 
 typedef struct s_list
