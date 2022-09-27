@@ -6,12 +6,16 @@
 /*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/23 11:16:10 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:38:23 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
+	Affiche un tableau
+	args:
+		tab: le tableau à afficher
+*/
 void	print_tab(char **tab)
 {
 	while (*tab)
@@ -20,7 +24,13 @@ void	print_tab(char **tab)
 		tab++;
 	}
 }
-
+/*
+	Compte le nombre d'élément dans le tableau
+	args:
+		tab: le tableau à compter
+	return:
+		i: Le nombre d'élément dans le tableau
+*/
 int	tab_length(char **tab)
 {
 	int	i;
@@ -30,7 +40,14 @@ int	tab_length(char **tab)
 		i++;
 	return (i);
 }
-
+/*
+	Ajoute une ligne au tableau
+	args:
+		tab: le tableau
+		line: la ligne à ajouter 
+	return:
+		new_tab: le nouveau tableau incluant la nouvelle ligne 
+*/
 char	**tab_join(char **tab, char *line)
 {
 	int		len;
@@ -40,6 +57,7 @@ char	**tab_join(char **tab, char *line)
 	i = 0;
 	if (!tab)
 	{
+		printf("new_tab create\n");
 		new_tab = ft_calloc(2, sizeof (char *));
 		new_tab[i++] = ft_strdup(line);
 		new_tab[i] = NULL;

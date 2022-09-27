@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_table_flip.c                                    :+:      :+:    :+:   */
+/*   is_white_space.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/04 15:10:03 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/26 16:29:00 by slavoie          ###   ########.fr       */
+/*   Created: 2022/09/27 15:56:53 by slavoie           #+#    #+#             */
+/*   Updated: 2022/09/27 16:06:26 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-/*
-	Sert à free un char**
-
-	args:
-			tab: le char** a free
-*/
-void	table_flip(char **tab)
+int	is_white_space(char c)
 {
-	int	i;
-
-	i = -1;
-	while (tab[++i])
-		free(tab[i]);
-	free(tab);
+	return ((c == 32) || (c == 9)) ;
 }

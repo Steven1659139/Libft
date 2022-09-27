@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/23 11:16:59 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/09/27 16:07:31 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int			ft_isalnum(int c);
 int			ft_isalpha(int c);
 int			ft_isascii(int c);
 int			ft_isdigit(int c);
+int			is_white_space(char c);
 int			ft_isprint(int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_tolower(int c);

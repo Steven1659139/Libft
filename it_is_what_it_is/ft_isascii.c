@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_table_flip.c                                    :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/04 15:10:03 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/26 16:29:00 by slavoie          ###   ########.fr       */
+/*   Created: 2021/05/25 18:08:36 by slavoie           #+#    #+#             */
+/*   Updated: 2022/09/27 15:56:20 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-/*
-	Sert à free un char**
-
-	args:
-			tab: le char** a free
-*/
-void	table_flip(char **tab)
+int	ft_isascii(int c)
 {
-	int	i;
+	int	rtn;
 
-	i = -1;
-	while (tab[++i])
-		free(tab[i]);
-	free(tab);
+	rtn = (c >= 0 && c <= 127);
+	return (rtn);
 }
