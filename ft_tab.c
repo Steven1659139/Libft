@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/27 14:38:23 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/03 11:21:29 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	**tab_join(char **tab, char *line)
 	i = 0;
 	if (!tab)
 	{
-		printf("new_tab create\n");
+		// printf("new_tab create\n");
 		new_tab = ft_calloc(2, sizeof (char *));
 		new_tab[i++] = ft_strdup(line);
 		new_tab[i] = NULL;
