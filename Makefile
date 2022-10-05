@@ -16,7 +16,7 @@ STR = str/ft_strlen.c str/ft_tolower.c str/ft_toupper.c str/ft_strncmp.c str/ft_
 TAB = tab/ft_table_flip.c tab/ft_tab.c
 
 LIST = list/lst_add.c list/lstnew_dbl.c  list/ft_lstsize_dbl.c list/ft_lstnew.c  \
-		list/ft_lstsize.c list/ft_lstlast.c list/lst_del.c list/ft_lstiter.c list/ft_lstmap.c
+		list/ft_lstsize.c list/ft_lstlast.c list/lst_del.c list/ft_lstiter.c list/ft_lstmap.c list/lstlast_dbl.c
 
 GNL = ./get_next_line/get_next_line_utils.c ./get_next_line/get_next_line.c
 
