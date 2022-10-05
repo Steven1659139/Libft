@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 13:57:11 by slavoie           #+#    #+#             */
-/*   Updated: 2022/07/16 16:44:29 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "../libft.h"
 
 static char	*ft_reverse_string(char *str, int index, int neg)
 {

@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/28 13:47:59 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/01 14:56:25 by slavoie          ###   ########.fr       */
+/*   Created: 2022/07/04 15:11:54 by slavoie           #+#    #+#             */
+/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+size_t	ft_strlen(const char *str)
 {
-	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	size_t	index;
+
+	if (!str)
+		return (0);
+	index = 0;
+	while (str[index])
+		index++;
+	return (index);
 }

@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_dbl.c                                   :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/04 15:13:08 by slavoie           #+#    #+#             */
-/*   Updated: 2022/07/04 15:13:09 by slavoie          ###   ########.fr       */
+/*   Created: 2021/06/06 15:01:48 by slavoie           #+#    #+#             */
+/*   Updated: 2022/10/05 13:47:23 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-size_t	ft_lstsize_dbl(t_dlist **first)
+t_list	*ft_lstnew(void *content)
 {
-	int		i;
-	t_dlist	*lst;
+	t_list	*new;
 
-	i = 0;
-	if (!*first)
-		return (0);
-	lst = *first;
-	while (lst->next != *first)
-	{
-		i++;
-		lst = lst->next;
-	}
-	return (++i);
+	new = (t_list *)ft_calloc(1, sizeof(*new));
+	if (!new)
+		return (NULL);
+	new -> content = content;
+	new -> next = NULL;
+	return (new);
 }

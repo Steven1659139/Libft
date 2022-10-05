@@ -1,23 +1,30 @@
 NAME = libft.a
 
-SRC =  ft_strlen.c  ft_tolower.c $(IT_IS_WHAT_IT_IS)\
-	   ft_toupper.c ft_atoi.c ft_strncmp.c ft_memset.c \
-	  ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_strchr.c \
-	  ft_strrchr.c ft_strlcat.c ft_strlcpy.c ft_strnstr.c ft_calloc.c ft_strdup.c ft_substr.c \
-	  ft_strtrim.c ft_strjoin.c ft_putchar_fd.c ft_putstr_fd.c ft_split.c ft_itoa.c ft_strmapi.c \
-	  ft_putendl_fd.c ft_putnbr_fd.c ft_yo_its_wrong.c ft_abs.c ft_atoll.c ft_num_to_base.c ft_print_hex.c \
-	  ft_table_flip.c  get.c  check.c lst_addback_dbl.c lstnew_dbl.c lstadd_dbl.c ft_lstsize_dbl.c count.c ft_tab.c\
+SRC =     $(IT_IS_WHAT_IT_IS) $(STR) $(TAB) $(LIST) $(PRINT) $(GNL) \
+	    ft_atoi.c  ft_memset.c \
+	  ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c ft_memcmp.c  \
+	    ft_calloc.c  \
+	    ft_yo_its_wrong.c ft_abs.c ft_atoll.c ft_num_to_base.c  \
+	    get.c  check.c  count.c \
 	  
 IT_IS_WHAT_IT_IS = it_is_what_it_is/ft_isdigit.c it_is_what_it_is/ft_isalnum.c \
 					it_is_what_it_is/ft_isprint.c it_is_what_it_is/ft_isalpha.c it_is_what_it_is/ft_isascii.c it_is_what_it_is/is_white_space.c
 
+STR = str/ft_strlen.c str/ft_tolower.c str/ft_toupper.c str/ft_strncmp.c str/ft_strchr.c str/ft_strdup.c str/ft_substr.c \
+	str/ft_strtrim.c str/ft_strjoin.c str/ft_split.c str/ft_itoa.c str/ft_strmapi.c str/ft_strrchr.c str/ft_strlcat.c str/ft_strlcpy.c str/ft_strnstr.c
+
+TAB = tab/ft_table_flip.c tab/ft_tab.c
+
+LIST = list/lst_add.c list/lstnew_dbl.c  list/ft_lstsize_dbl.c list/ft_lstnew.c  \
+		list/ft_lstsize.c list/ft_lstlast.c list/lst_del.c list/ft_lstiter.c list/ft_lstmap.c
+
 GNL = ./get_next_line/get_next_line_utils.c ./get_next_line/get_next_line.c
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+PRINT = print/ft_putnbr_fd.c print/ft_putendl_fd.c print/ft_print_hex.c print/ft_putstr_fd.c print/ft_putchar_fd.c
 
-OBJS = $(SRC:.c=.o) $(GNL:.c=.o)
 
-OBJS_BONUS = $(BONUS:.c=.o)
+OBJS = $(SRC:.c=.o)
+
 
 HDRS = libft.h
 
@@ -27,20 +34,20 @@ CC = @gcc
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(OBJS_BONUS)
-	@ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
+$(NAME): $(OBJS)
+	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
 clean:
-	@rm -f $(OBJS) $(OBJS_BONUS)
+	@rm -f $(OBJS)
 
 fclean: clean
-	@rm -f $(NAME) $(OBJS_BONUS)
+	@rm -f $(NAME)
 
 re: fclean all
 
-add:
-	@git add *.c *.h Makefile get_next_line
+add: fclean
+	@git add *
 	@git status
 push:
 	@git push origin master

@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize_dbl.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 15:39:53 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/07 11:22:27 by slavoie          ###   ########.fr       */
+/*   Created: 2022/07/04 15:13:08 by slavoie           #+#    #+#             */
+/*   Updated: 2022/10/05 13:47:25 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+size_t	ft_lstsize_dbl(t_dlist **first)
 {
-	new -> next = *alst;
-	*alst = new;
+	int		i;
+	t_dlist	*lst;
+
+	i = 0;
+	if (!*first)
+		return (0);
+	lst = *first;
+	while (lst->next != *first)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (++i);
 }

@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 12:49:41 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/09 15:51:59 by slavoie          ###   ########.fr       */
+/*   Created: 2021/05/25 18:06:08 by slavoie           #+#    #+#             */
+/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*rtn;
-	int		len;
-	int		index;
 
-	index = 0;
-	len = ft_strlen(s1);
-	rtn = ft_calloc(len + 1, sizeof(char));
-	if (!rtn)
-		return (0);
-	while (len--)
-		rtn[index++] = *s1++;
-	rtn[index] = 0;
+	rtn = NULL;
+	while (1)
+	{
+		if (*s == (unsigned char)c)
+			rtn = (char *)s;
+		if (*s == 0)
+			break ;
+		s++;
+	}
 	return (rtn);
 }

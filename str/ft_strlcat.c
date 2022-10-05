@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 15:12:49 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/09 15:46:41 by slavoie          ###   ########.fr       */
+/*   Created: 2021/05/25 18:05:38 by slavoie           #+#    #+#             */
+/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
 	size_t	index;
 
 	index = 0;
-	if (!(dst || src))
-		return (0);
-	while (src[index] && (index + 1) < dst_size)
-	{	
-		dst[index] = src[index];
+	while (*dst && index < dst_size)
+	{
+		index++;
+		dst++;
+	}
+	while (*src && (index + 1) < dst_size)
+	{
+		*dst++ = *src++;
 		index++;
 	}
-	if (dst_size != 0)
-		dst[index] = 0;
-	while (src[index])
+	if (index < dst_size)
+		*dst = 0;
+	while (*src++)
 		index++;
 	return (index);
 }
