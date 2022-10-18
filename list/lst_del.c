@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:41:08 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:41:38 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/11 16:44:32 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (del)
-		del(lst -> content);
+		del(lst->content);
 	free(lst);
 }
 

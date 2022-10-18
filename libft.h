@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.com>     +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/09/27 16:07:31 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/18 15:17:55 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void		*get_top(t_dlist *stack);
 void		table_flip(char **tab);
 void		ft_print_hex(unsigned int num);
 void		lst_addback_dbl(t_dlist **alst, t_dlist *new);
+void 		lst_print(t_list **list);
 char		*ft_num_to_base(unsigned long long num, int base);
 void		yo_its_wrong(char *str);
 void		ft_putchar_fd(char c, int fd);
@@ -91,6 +92,7 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_split(char const *s, char c);
+char		**tabcpy(char **src);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 t_list		*ft_lstnew(void *content);

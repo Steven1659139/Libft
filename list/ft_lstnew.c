@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 15:01:48 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:47:23 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/12 12:07:01 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	new = (t_list *)ft_calloc(1, sizeof(*new));
 	if (!new)
 		return (NULL);
-	new -> content = content;
-	new -> next = NULL;
+	new->content = content;
+	new->next = NULL;
 	return (new);
 }

@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   lst_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42quebec.>        +#+  +:+       +#+        */
+/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 18:13:05 by slavoie           #+#    #+#             */
-/*   Updated: 2021/06/09 15:38:42 by slavoie          ###   ########.fr       */
+/*   Created: 2022/10/11 16:22:30 by slavoie           #+#    #+#             */
+/*   Updated: 2022/10/11 16:34:38 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-int	ft_toupper(int c)
+void lst_print(t_list **list)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		c -= 32;
-		return (c);
-	}
-	return (c);
+    t_list *node;
+    int i;
+
+    node = *list;
+    i = 0;
+
+    while (node)
+    {
+        printf("node[%d] = %s\n", i, (char *)node->content);
+        node = node->next;
+        i++;
+    }
 }

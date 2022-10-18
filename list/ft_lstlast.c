@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 15:44:48 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:47:18 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/12 13:46:36 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (0);
-	while (lst -> next)
-	{
-		lst = lst -> next;
-	}
+	while (lst->next)
+		lst = lst->next;
 	return (lst);
 }

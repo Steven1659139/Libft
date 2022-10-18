@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/18 15:37:07 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	print_tab(char **tab)
 {
 	while (*tab)
 	{
-		printf("str = %s\n", *tab);
+		printf("%s\n", *tab);
 		tab++;
 	}
 }
@@ -73,5 +73,27 @@ char	**tab_join(char **tab, char *line)
 	new_tab[i++] = ft_strdup(line);
 	new_tab[i] = 0;
 	table_flip(tab);
+	return (new_tab);
+}
+
+char	**tabcpy(char **src)
+{
+	char **new_tab;
+	int	len;
+	int i;
+
+	i = 0;
+	len = tab_length(src);
+	new_tab = malloc(sizeof(char *) * len + 1);
+
+	while(i < len)
+	{
+		new_tab[i] = ft_strdup(src[i]);
+		// printf("new_tab[%d] = %s\n", i, new_tab[i]);
+		i++;
+	}
+	new_tab[i] = 0;
+
+	// print_tab(new_tab);
 	return (new_tab);
 }
