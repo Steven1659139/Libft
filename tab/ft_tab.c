@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/18 15:37:07 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/23 09:32:47 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,8 @@ char	**tabcpy(char **src)
 		// printf("new_tab[%d] = %s\n", i, new_tab[i]);
 		i++;
 	}
-	new_tab[i] = 0;
+	// i++;
+	// new_tab[i] = 0;
 
 	// print_tab(new_tab);
 	return (new_tab);
