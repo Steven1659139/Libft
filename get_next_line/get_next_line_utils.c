@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 14:18:09 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/14 18:46:48 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/24 15:43:23 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,29 +66,29 @@ char	*ft_strchr(const char *s, int c)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*rtn;
+	char	*str;
 	size_t	len;
 
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	rtn = malloc(len);
-	if (!rtn)
+	str = ft_calloc(len, sizeof(char));
+	if (!str)
 		return (NULL);
-	ft_strlcpy(rtn, s1, len);
-	ft_strlcat(rtn, s2, len);
-	return (rtn);
+	ft_strlcpy(str, s1, len);
+	ft_strlcat(str, s2, len);
+	return (str);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*rtn;
+	char			*str;
 	unsigned int	index;
 
 	index = 0;
-	rtn = (char *)malloc (sizeof (char) * (len + 1));
-	if (!(s && rtn))
+	str = (char *)malloc (sizeof (char) * (len + 1));
+	if (!(s && str))
 		return (NULL);
 	while (index < len && start < ft_strlen(s))
-		rtn[index++] = s[start++];
-	rtn[index] = 0;
-	return (rtn);
+		str[index++] = s[start++];
+	str[index] = 0;
+	return (str);
 }

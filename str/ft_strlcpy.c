@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 15:12:49 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/24 13:33:08 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 	size_t	index;
 
 	index = 0;
-	if (!(dst || src))
+	if (!(dst) || (!src))
 		return (0);
 	while (src[index] && (index + 1) < dst_size)
 	{	

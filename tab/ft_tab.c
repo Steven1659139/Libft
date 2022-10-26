@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/23 09:32:47 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/10/25 16:51:32 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 */
 void	print_tab(char **tab)
 {
+	printf("IN ENV\n");
+
 	while (*tab)
 	{
 		printf("%s\n", *tab);
