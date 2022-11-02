@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/18 15:17:55 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/02 16:01:34 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,6 @@ void		*get_bottom(t_dlist *stack);
 int			int_checker(long long nb);
 int			tab_length(char **tab);
 char		**tab_join(char **tab, char *line);
+void		print_tab(char **tab);
 
 #endif
