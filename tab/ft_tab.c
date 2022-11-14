@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/25 16:51:32 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/14 17:00:48 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 */
 void	print_tab(char **tab)
 {
-	printf("IN ENV\n");
-
 	while (*tab)
 	{
 		printf("%s\n", *tab);
@@ -33,6 +31,7 @@ void	print_tab(char **tab)
 	return:
 		i: Le nombre d'élément dans le tableau
 */
+
 int	tab_length(char **tab)
 {
 	int	i;
@@ -50,6 +49,7 @@ int	tab_length(char **tab)
 	return:
 		new_tab: le nouveau tableau incluant la nouvelle ligne 
 */
+
 char	**tab_join(char **tab, char *line)
 {
 	int		len;
@@ -59,7 +59,6 @@ char	**tab_join(char **tab, char *line)
 	i = 0;
 	if (!tab)
 	{
-		// printf("new_tab create\n");
 		new_tab = ft_calloc(2, sizeof (char *));
 		new_tab[i++] = ft_strdup(line);
 		new_tab[i] = NULL;
@@ -80,23 +79,17 @@ char	**tab_join(char **tab, char *line)
 
 char	**tabcpy(char **src)
 {
-	char **new_tab;
-	int	len;
-	int i;
+	char	**new_tab;
+	int		len;
+	int		i;
 
 	i = 0;
 	len = tab_length(src);
 	new_tab = malloc(sizeof(char *) * len + 1);
-
-	while(i < len)
+	while (i < len)
 	{
 		new_tab[i] = ft_strdup(src[i]);
-		// printf("new_tab[%d] = %s\n", i, new_tab[i]);
 		i++;
 	}
-	// i++;
-	// new_tab[i] = 0;
-
-	// print_tab(new_tab);
 	return (new_tab);
 }

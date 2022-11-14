@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/02 16:01:34 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/14 16:42:53 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void		*get_top(t_dlist *stack);
 void		table_flip(char **tab);
 void		ft_print_hex(unsigned int num);
 void		lst_addback_dbl(t_dlist **alst, t_dlist *new);
-void 		lst_print(t_list **list);
+void		lst_print(t_list **list);
 char		*ft_num_to_base(unsigned long long num, int base);
 void		yo_its_wrong(char *str);
 void		ft_putchar_fd(char c, int fd);
