@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/19 15:45:51 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/19 16:32:14 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,9 @@ char	**tab_join(char **tab, char *line)
 		i++;
 	}
 	if (line)
+	{
 		new_tab[i] = ft_strdup(line);
+	}
 	table_flip(tab);
 	return (new_tab);
 }
