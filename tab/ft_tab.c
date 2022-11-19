@@ -72,9 +72,7 @@ char	**tab_join(char **tab, char *line)
 		i++;
 	}
 	if (line)
-	{
 		new_tab[i] = ft_strdup(line);
-	}
 	table_flip(tab);
 	return (new_tab);
 }
