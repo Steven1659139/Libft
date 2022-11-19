@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 18:05:38 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/24 14:51:31 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/18 19:16:00 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 	size_t	index;
 
 	index = 0;
+	if (!dst || !src)
+		return (0);
 	while (*dst && (index < dst_size))
 	{
 		index++;

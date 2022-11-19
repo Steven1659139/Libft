@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/14 17:00:48 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/18 17:19:09 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,9 @@ char	**tab_join(char **tab, char *line)
 		new_tab[i] = ft_strdup(tab[i]);
 		i++;
 	}
-	new_tab[i++] = ft_strdup(line);
+	if (line)
+		new_tab[i] = ft_strdup(line);
+	i++;
 	new_tab[i] = 0;
 	table_flip(tab);
 	return (new_tab);
@@ -85,7 +87,7 @@ char	**tabcpy(char **src)
 
 	i = 0;
 	len = tab_length(src);
-	new_tab = malloc(sizeof(char *) * len + 1);
+	new_tab = ft_calloc(len + 1, sizeof(char *));
 	while (i < len)
 	{
 		new_tab[i] = ft_strdup(src[i]);
