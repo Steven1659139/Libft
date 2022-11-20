@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 14:18:09 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/24 15:43:23 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/18 21:15:57 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,11 +84,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	index;
 
 	index = 0;
-	str = (char *)malloc (sizeof (char) * (len + 1));
+	str = (char *)ft_calloc((len + 1), sizeof (char));
 	if (!(s && str))
 		return (NULL);
 	while (index < len && start < ft_strlen(s))
 		str[index++] = s[start++];
-	str[index] = 0;
 	return (str);
 }

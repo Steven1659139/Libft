@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 00:14:03 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/18 20:50:31 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,9 @@ static char	*word_dup(const char *str, int start, int finish)
 	int		i;
 
 	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
+	word = ft_calloc((finish - start + 1), sizeof(char));
 	while (start < finish)
 		word[i++] = str[start++];
-	word[i] = '\0';
 	return (word);
 }
 
@@ -55,7 +54,7 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	split = malloc((count_word(s, c) + 1) * sizeof(char *));
+	split = ft_calloc((count_word(s, c) + 1), sizeof(char *));
 	if (!*s || !split)
 		return (0);
 	i = 0;
@@ -72,6 +71,5 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	split[j] = 0;
 	return (split);
 }

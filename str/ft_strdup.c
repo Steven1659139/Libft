@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 12:49:41 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/19 16:32:10 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ char	*ft_strdup(const char *s1)
 		return (0);
 	while (len--)
 		rtn[index++] = *s1++;
-	rtn[index] = 0;
 	return (rtn);
 }
