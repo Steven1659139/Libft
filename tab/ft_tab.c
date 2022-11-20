@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tab.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:50:13 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/14 17:00:48 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/20 16:46:34 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
 /*
 	Affiche un tableau
 	args:
@@ -24,6 +25,7 @@ void	print_tab(char **tab)
 		tab++;
 	}
 }
+
 /*
 	Compte le nombre d'élément dans le tableau
 	args:
@@ -31,7 +33,6 @@ void	print_tab(char **tab)
 	return:
 		i: Le nombre d'élément dans le tableau
 */
-
 int	tab_length(char **tab)
 {
 	int	i;
@@ -41,6 +42,7 @@ int	tab_length(char **tab)
 		i++;
 	return (i);
 }
+
 /*
 	Ajoute une ligne au tableau
 	args:
@@ -49,7 +51,6 @@ int	tab_length(char **tab)
 	return:
 		new_tab: le nouveau tableau incluant la nouvelle ligne 
 */
-
 char	**tab_join(char **tab, char *line)
 {
 	int		len;
@@ -91,5 +92,24 @@ char	**tabcpy(char **src)
 		new_tab[i] = ft_strdup(src[i]);
 		i++;
 	}
+	return (new_tab);
+}
+
+char	**tab_trunc(char **tab, char *str, int len)
+{
+	int		i;
+	char	**new_tab;
+
+	i = 0;
+	new_tab = NULL;
+	if (!tab || !str)
+		return (tab);
+	while (tab[i])
+	{
+		if (ft_strncmp(tab[i], str, len) != 0)
+			new_tab = tab_join(new_tab, tab[i]);
+		i++;
+	}
+	table_flip(tab);
 	return (new_tab);
 }

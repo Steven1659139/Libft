@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/14 16:42:53 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:59:33 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,7 @@ int			int_checker(long long nb);
 int			tab_length(char **tab);
 char		**tab_join(char **tab, char *line);
 void		print_tab(char **tab);
+char		**tab_trunc(char **tab, char *str, int len);
+char		*search_line(char **tab, char *line);
 
 #endif
