@@ -3,55 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stevenlavoie <stevenlavoie@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 14:18:09 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/18 21:15:57 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/24 17:03:02 by stevenlavoi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
-{
-	size_t	index;
+// size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
+// {
+// 	size_t	index;
 
-	index = 0;
-	if (!(dst || src))
-		return (0);
-	while (src[index] && (index + 1) < dst_size)
-	{	
-		dst[index] = src[index];
-		index++;
-	}
-	if (dst_size != 0)
-		dst[index] = 0;
-	while (src[index])
-		index++;
-	return (index);
-}
+// 	index = 0;
+// 	if (!(dst || src))
+// 		return (0);
+// 	while (src[index] && (index + 1) < dst_size)
+// 	{	
+// 		dst[index] = src[index];
+// 		index++;
+// 	}
+// 	if (dst_size != 0)
+// 		dst[index] = 0;
+// 	while (src[index])
+// 		index++;
+// 	return (index);
+// }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
-{
-	size_t	index;
+// size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
+// {
+// 	size_t	index;
 
-	index = 0;
-	while (*dst && index < dst_size)
-	{
-		index++;
-		dst++;
-	}
-	while (*src && (index + 1) < dst_size)
-	{
-		*dst++ = *src++;
-		index++;
-	}
-	if (index < dst_size)
-		*dst = 0;
-	while (*src++)
-		index++;
-	return (index);
-}
+// 	index = 0;
+// 	while (*dst && index < dst_size)
+// 	{
+// 		index++;
+// 		dst++;
+// 	}
+// 	while (*src && (index + 1) < dst_size)
+// 	{
+// 		*dst++ = *src++;
+// 		index++;
+// 	}
+// 	if (index < dst_size)
+// 		*dst = 0;
+// 	while (*src++)
+// 		index++;
+// 	return (index);
+// }
 
 char	*ft_strchr(const char *s, int c)
 {
