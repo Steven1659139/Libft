@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:10:03 by slavoie           #+#    #+#             */
-/*   Updated: 2022/10/05 13:37:33 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/25 11:36:14 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ void	table_flip(char **tab)
 	int	i;
 
 	i = -1;
-	while (tab[++i])
-		free(tab[i]);
-	free(tab);
+	if (tab)
+	{
+		while (tab[++i])
+			free(tab[i]);
+		free(tab);
+	}
 }
