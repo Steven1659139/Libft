@@ -11,7 +11,7 @@ IT_IS_WHAT_IT_IS = it_is_what_it_is/ft_isdigit.c it_is_what_it_is/ft_isalnum.c \
 					it_is_what_it_is/ft_isprint.c it_is_what_it_is/ft_isalpha.c it_is_what_it_is/ft_isascii.c it_is_what_it_is/is_white_space.c
 
 STR = str/ft_strlen.c str/ft_tolower.c str/ft_toupper.c str/ft_strncmp.c str/ft_strchr.c str/ft_strdup.c str/ft_substr.c \
-	str/ft_strtrim.c str/ft_strjoin.c str/ft_split.c str/ft_itoa.c str/ft_strmapi.c str/ft_strrchr.c str/ft_strlcat.c str/ft_strlcpy.c str/ft_strnstr.c
+	str/ft_strtrim.c str/ft_strjoin.c str/ft_split.c str/ft_itoa.c str/ft_strmapi.c str/ft_strrchr.c str/ft_strlcat.c str/ft_strlcpy.c str/ft_strnstr.c str/str_isnum.c
 
 TAB = tab/ft_table_flip.c tab/ft_tab.c tab/search_line.c
 
