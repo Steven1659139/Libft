@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:04:18 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/26 14:48:19 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/29 15:54:04 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,14 @@ typedef struct s_dlist
 
 // Couleur
 
-# define RED "\e[0;31m"
-# define GREEN "\e[0;32m"
-# define YELLOW "\e[0;33m"
-# define BLUE "\e[0;34m"
-# define VIOLET "\e[0;35m"
-# define CYAN "\e[0;36m"
+# define RED "\033[0;31m"
+# define GREEN "\033[1;32m"
+# define BRIGHT_GREEN "\033[1;92m"
+# define BOLD "\033[1m"
+# define YELLOW "\033[0;33m"
+# define BLUE "\033[0;34m"
+# define VIOLET "\033[0;35m"
+# define CYAN "\033[0;36m"
 # define RESET "\033[0m"
 
 # define INT_MAX 2147483647

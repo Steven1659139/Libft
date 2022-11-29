@@ -6,7 +6,7 @@
 /*   By: slavoie <slavoie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 16:37:46 by slavoie           #+#    #+#             */
-/*   Updated: 2022/11/25 18:14:59 by slavoie          ###   ########.fr       */
+/*   Updated: 2022/11/27 21:08:18 by slavoie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int			len;
 	char		*str;
 
+	str = NULL;
 	if (!s1 || !set)
 		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
